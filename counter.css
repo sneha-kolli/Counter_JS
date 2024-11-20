@@ -1,0 +1,82 @@
+body{
+    font-family: sans-serif;
+    background-color: #f0f8f0;
+    
+
+}
+
+h1{
+ 
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #005900;
+    text-shadow: #FFFCA8 2px 2px 0px, #9C9C9C 4px 4px 0px;
+    
+    
+}
+
+#counterBlock{
+    font-weight: 900;
+    font-size: 60px;
+    font-style:inherit;
+    size: 600;
+    margin-bottom: 10px;
+    color: #005900;
+    text-shadow: #FFFCA8 2px 2px 0px, #9C9C9C 4px 4px 0px;
+}
+
+.container{
+    margin-top: 120px;
+    width: 430px;
+    height: 300px;
+    box-shadow: 4px 40px 30px rgba(0,0,0,0.2);
+    /* box-shadow: #FFFCA8 2px 2px 0px, #9C9C9C 4px 4px 0px; */
+    border-radius: 12px;
+    background: #E1A95F;
+    overflow: hidden;
+    border-color: darkgreen;
+    border-style: solid;
+    border-width: 8px;
+    
+    
+}
+
+input{
+    /* border-radius: 3px; */
+    color: black;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    box-shadow: black;
+    border-color: #005900;
+    
+}
+
+input::placeholder {
+    color: #005900;
+    opacity: 1; 
+  }
+  
+
+.button-container{
+    color: black;
+    border-radius: 10px;
+    font-size: 15px;
+    
+}
+
+button{
+    
+    color: 4px 40px 30px rgba(0,0,0,0.2);
+    font-size: 15px;
+    font-style:initial;
+    border-color: #005900;
+    border-radius: 8px;
+
+}
+
+button:hover{
+    background-color: #005900;
+    color: whitesmoke;
+}

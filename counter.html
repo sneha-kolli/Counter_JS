@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="counter.css">
+</head>
+<body>
+    <center>
+    <section class="container">
+    <h1>COUNTER</h1>
+    <div id="counterBlock">0</div>
+    &nbsp;
+    <div class="input-container" id="inputContainer">
+        <input type="number" id="num1" placeholder="Additon value">
+        <input type="number" id="num2" placeholder="Subtraction value">
+    </div>
+    &nbsp;
+    <div class="button-container">
+        <button onclick="Inc()">Increment</button>
+        <button onclick="Dec()">Decrement</button>
+        <button onclick="Reset()">Reset</button>
+        <button onclick="Add()">Add</button>
+        <button onclick="Sub()">Subtract</button>
+    </div>
+    </section>
+   </center>
+</body>
+<script>
+    const d_obj = {counter:0};
+
+    // let's set few properties of the object
+
+    Object.defineProperty(d_obj,"Add",{set:function(val){this.counter+=val; UpdateDisplay(); }});
+
+    Object.defineProperty(d_obj,"Sub",{set:function(val){this.counter-=val; UpdateDisplay();}});
+
+    Object.defineProperty(d_obj,"Inc",{get:function(){this.counter++;  UpdateDisplay();}});
+
+    Object.defineProperty(d_obj,"Dec",{get:function(){this.counter--; UpdateDisplay();}});
+    
+    Object.defineProperty(d_obj,"Reset",{get: function(){this.counter = 0; UpdateDisplay(); }});
+
+    //invoking functions
+
+    function Add(){
+        const add_val = parseInt(document.getElementById("num1").value)||0;
+        d_obj.Add = add_val;
+        document.getElementById("num1").value = '';
+        
+    }
+
+    function Sub(){
+        const sub_val = parseInt(document.getElementById("num2").value)||0;
+        d_obj.Sub = sub_val;
+        document.getElementById("num2").value = '';
+    }
+    
+    function Inc(){
+        d_obj.Inc;
+    }
+
+    function Dec(){
+        d_obj.Dec;
+    }
+
+    function Reset(){
+        d_obj.Reset;
+    }
+
+    function UpdateDisplay(){
+        document.getElementById("counterBlock").innerText = d_obj.counter;
+    }
+
+    
+
+
+    // d_obj.Reset;
+    // d_obj.Add= 50 ;
+    // d_obj.Sub = -2;
+    // d_obj.Inc;
+    // d_obj.Dec;
+    // d_obj.Inc;
+    document.getElementById("counterBlock").innerHTML = d_obj.counter;
+
+</script>
+</html>
